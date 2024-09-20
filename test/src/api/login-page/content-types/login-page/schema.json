@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "login_pages",
+  "info": {
+    "singularName": "login-page",
+    "pluralName": "login-pages",
+    "displayName": "LoginPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "form": {
+      "type": "dynamiczone",
+      "components": [
+        "element.field",
+        "element.button"
+      ]
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

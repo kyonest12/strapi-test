@@ -1,0 +1,40 @@
+{
+  "name": "test",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "deploy": "strapi deploy"
+  },
+  "devDependencies": {
+    "@strapi/provider-email-sendgrid": "^4.25.11",
+    "free-mail-sender": "^1.0.1",
+    "nodemailer": "^6.9.15"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.25.10",
+    "@strapi/plugin-i18n": "4.25.10",
+    "@strapi/plugin-users-permissions": "4.25.10",
+    "@strapi/strapi": "4.25.10",
+    "pg": "8.8.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "styled-components": "5.3.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "61a868de-af10-411e-9f74-c1e04639f028"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_element_fields",
+  "info": {
+    "displayName": "field"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

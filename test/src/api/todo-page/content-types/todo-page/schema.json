@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "todo_pages",
+  "info": {
+    "singularName": "todo-page",
+    "pluralName": "todo-pages",
+    "displayName": "TodoForm",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "field": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.field"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.button"
+    }
+  }
+}

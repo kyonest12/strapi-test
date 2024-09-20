@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_element_infos",
+  "info": {
+    "displayName": "info",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "is_done": {
+      "type": "boolean"
+    }
+  }
+}
