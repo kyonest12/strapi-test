@@ -7,6 +7,7 @@ const Register = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('');
     const [inValidRegister, setInValidRegister] = useState(false);
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,17 +18,22 @@ const Register = () => {
         setPassword(e.target.value);
     };
 
+    const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setUsername(e.target.value);
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         console.log(email)
         console.log(password)
+        console.log(username)
         try {
-            const response = await fetch('http://localhost:3000/register', {
+            const response = await fetch('http://localhost:1337/api/auth/local/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, password }),
+                body: JSON.stringify({ email, password, username }),
             });
             if (!response.ok) {
                 setInValidRegister(true)
@@ -37,7 +43,7 @@ const Register = () => {
 
         } catch (error) {
             setInValidRegister(true)
-            console.error('Error during login:', error);
+            console.error('Error during register:', error);
         }
       };
     
@@ -55,6 +61,10 @@ const Register = () => {
             <div>
                 <label className="block text-sm">Password</label>
                 <input type="password" value={password} onChange={handlePasswordChange} className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" />
+            </div>
+            <div>
+                <label className="block text-sm">Username</label>
+                <input type="text" value={username} onChange={handleUsernameChange} className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" />
             </div>
             <div className="flex items-center justify-between">
                 <button className="px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none" onClick={handleSubmit}>Register</button>

@@ -5,3 +5,7 @@ services:
     build: .
     ports:
       - "5173:5173"
+    volumes:
+      - ./src:/opt/app/src
+      - ./package.json:/opt/package.json
+      - ./public:/opt/app/public
